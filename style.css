@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 2px solid gray;
+}
+span {
+  color: skyblue;
+}
+input {
+  margin-left: 20px;
+}
+.js {
+  font-weight: bold;
+  color: pink;
+}
+#grid ol {
+  border-right: 2px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+  padding-left: 40px;
+}
+#article {
+  padding: 25px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#first {
+  color: gray;
+}
+@media (max-width:800px){
+  #grid {
+    display: block;
+  }
+  #grid ol {
+    border-right: none;
+  }
+  h1 {
+    border-bottom: none;
+  }
+
+}
