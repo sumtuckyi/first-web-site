@@ -19,6 +19,12 @@ var Body = {
     $('body').css('backgroundColor', color);
   }
 }//Body라는 객체의 property 생성
+function keywordSetColor(color) {
+  var nodelist = document.querySelectorAll('.js');
+  for(let i = 0; i < nodelist.length; i++){
+    nodelist[i].style.color = color;
+  }
+}
 
 function nightDayHadnler(self) {
   var target = document.querySelector('body');
@@ -26,21 +32,21 @@ function nightDayHadnler(self) {
     Body.setBackgroundColor('black');
     Body.setColor('white');
     self.value = 'day';
-    var nodelist = document.querySelectorAll('.js');
-    for(let i = 0; i < nodelist.length; i++){
-      nodelist[i].style.color = 'pink';
-    }
-
+    // var nodelist = document.querySelectorAll('.js');
+    // for(let i = 0; i < nodelist.length; i++){
+    //   nodelist[i].style.color = 'pink';
+    //}
+    keywordSetColor('pink');
     Links.setColor('powderblue');
   } else {
     Body.setBackgroundColor('white');
     Body.setColor('black');
     self.value = 'night';
-    var nodelist = document.querySelectorAll('.js');
-    for(let i = 0; i < nodelist.length; i++){
-      nodelist[i].style.color = 'hotpink';
-    }
-
+    // var nodelist = document.querySelectorAll('.js');
+    // for(let i = 0; i < nodelist.length; i++){
+    //   nodelist[i].style.color = 'darkpink';
+    // }
+    keywordSetColor('darkpink');
     Links.setColor('blue');
     }
   }
